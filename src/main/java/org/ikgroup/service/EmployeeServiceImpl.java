@@ -19,6 +19,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class EmployeeServiceImpl implements EmployeeService {
 	
+	private static final long serialVersionUID = 3138131698601736268L;
+
 	public static final String SEQUENCE_KEY_EMPLOYEE = "empId";
 	
 	@Autowired

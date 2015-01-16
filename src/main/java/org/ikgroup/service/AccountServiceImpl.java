@@ -14,6 +14,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class AccountServiceImpl implements AccountService {
 	
+	private static final long serialVersionUID = 4033291681457865598L;
+	
 	@Autowired
 	private AccountMapper accountMapper;
 

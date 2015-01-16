@@ -1,5 +1,6 @@
 package org.ikgroup.pao;
 
+import java.io.Serializable;
 import java.sql.Types;
 import java.util.Map;
 
@@ -15,7 +16,9 @@ import org.springframework.jdbc.object.StoredProcedure;
  * @author glenlivet
  *
  */
-public class SequencePao extends StoredProcedure {
+public class SequencePao extends StoredProcedure implements Serializable{
+	
+	private static final long serialVersionUID = -3817088818954949475L;
 	
 	private static final String PROC_NAME = "get_sequence";
 	
