@@ -9,6 +9,17 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 		<param-value>Development</param-value>
 	</context-param>
 
+	<context-param>
+		<param-name>facelets.SKIP_COMMENTS</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
+	<!-- theme -->
+	<context-param>
+		<param-name>primefaces.THEME</param-name>
+		<param-value>southwest</param-value>
+	</context-param>
+
 	<!-- The definition of the Root Spring Container shared by all Servlets 
 		and Filters -->
 	<context-param>
@@ -38,11 +49,11 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Faces Servlet</servlet-name>
-		<url-pattern>/faces/*</url-pattern>
+		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
 
 	<welcome-file-list>
-		<welcome-file>faces/index.xhtml</welcome-file>
+		<welcome-file>index.xhtml</welcome-file>
 	</welcome-file-list>
 
 </web-app>

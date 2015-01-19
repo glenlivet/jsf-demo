@@ -18,11 +18,14 @@
         </association>
     </resultMap>
     
-    <select id="findAll" resultMap="employeeResultMap">
+    <select id="findAll" resultMap="employeeResultMap" parameterType="map">
         SELECT ID, FULLNAME, INITIALS, STATE_FLAG, ACCOUNT_ID,
          USERNAME, ACCOUNT_STATE 
         FROM EMPLOYEE_VIEW  
-        WHERE STATE_FLAG > 0
+        <where>
+        	<if test="name != null and name != ''">FULLNAME LIKE #{name}</if>
+        	AND STATE_FLAG > 0
+        </where>
     </select>
     
     <select id="findById" resultMap="employeeResultMap" parameterType="string" >

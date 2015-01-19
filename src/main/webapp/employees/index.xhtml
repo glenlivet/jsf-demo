@@ -15,29 +15,104 @@
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>INSERT TITLE HERE</title>
+<!-- 	<h:outputStylesheet library="css" name="reset.min.css" /> -->
+	<h:outputStylesheet library="sungard-southwest" name="css/common.css" />
+	<h:outputStylesheet library="easyui-southwest" name="icon.css" />
+	<style type="text/css">
+
+.ik-searchlabel {
+	width: 8%;
+	text-align: right;
+	padding-right: 1em;
+}
+
+.ik-searchinput {
+	width: 17%;
+}
+
+
+.ik-searchbtn {
+	margin-right: 1em;
+}
+
+	</style>
+	<h:outputScript library="sungard-southwest" name="js/css_helper.js" />
+	
+<script type="text/javascript">
+	$(document).ready(function(){
+		initCommonTablePage();
+	});
+</script>
 </h:head>
 <h:body>
-	<h3>hello #{helloBean.name}!</h3>
 
-	<h:form>
-		<p:dataTable var="emp" value="#{employeesPageBean.employees}">
-			<p:column headerText="Id">
+	<h:form id="form">
+		<p:panelGrid columns="8" styleClass="ik-searcharea" columnClasses="ik-searchlabel, ik-searchinput,ik-searchlabel, ik-searchinput,ik-searchlabel, ik-searchinput,ik-searchlabel, ik-searchinput">
+			<p:outputLabel value="姓名" />
+			<p:inputText value="#{employeesPageBean.query.name}" />
+			<p:outputLabel value="账号" />
+			<p:inputText value="#{employeesPageBean.query.account}" />
+			<p:outputLabel value="ID" />
+			<p:inputText value="#{employeesPageBean.query.id}" />
+			<p:outputLabel value="账号" />
+			<p:inputText value="#{employeesPageBean.query.id}" />
+			
+			<p:outputLabel value="姓名" />
+			<p:inputText value="#{employeesPageBean.query.name}" />
+			<p:outputLabel value="账号" />
+			<p:inputText value="#{employeesPageBean.query.account}" />
+			<p:outputLabel value="ID" />
+			<p:inputText value="#{employeesPageBean.query.id}" />
+			<p:outputLabel value="" />
+			<p:commandButton id="searchButton" styleClass="ik-searchbtn" value="查询" update=":form:tbl"
+				actionListener="#{employeesPageBean.doQuery}"></p:commandButton>
+		</p:panelGrid>
+
+		<p:menubar styleClass="ik-menubar">
+			
+			<p:menuitem value="新增" styleClass="ik-icon icon-add ik-seperator" 
+				/>
+				
+			<p:menuitem value="修改" styleClass="ik-icon icon-edit ik-seperator"
+				 />
+				
+			<p:menuitem value="删除" styleClass="ik-icon icon-remove" />
+			
+
+		</p:menubar>
+
+		<p:dataTable id="tbl" var="emp" value="#{employeesPageBean.employees}" 
+		styleClass="ik-datatable" tableStyleClass="ik-table"
+		paginator="true" paginatorPosition="bottom" >
+			<p:column headerText="工号">
 				<h:outputText value="#{emp.id}" />
 			</p:column>
 
-			<p:column headerText="Fullname">
+			<p:column headerText="名字">
 				<h:outputText value="#{emp.fullname}" />
 			</p:column>
 
-			<p:column headerText="Initials">
+			<p:column headerText="缩写">
 				<h:outputText value="#{emp.initials}" />
 			</p:column>
 
-			<p:column headerText="Account">
+			<p:column headerText="账号">
 				<h:outputText value="#{emp.account.username}" />
 			</p:column>
 		</p:dataTable>
 	</h:form>
+	
+	<p:dialog >
+		<h:form id="createEditForm">
+			<h:panelGroup >
+				<h:panelGrid columns="2">
+					<h:outputLabel value="姓" />
+					<p:inputText value="#{employeesPageBean.formObject.lastname}" />
+					<h:outputLabel value="名" />
+				</h:panelGrid>
+			</h:panelGroup>
+		</h:form>
+	</p:dialog>
 </h:body>
 	</html>
 </f:view>

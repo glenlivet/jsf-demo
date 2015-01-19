@@ -1,6 +1,7 @@
 package org.ikgroup.persistence;
 
 import java.util.List;
+import java.util.Map;
 
 import org.ikgroup.domain.Employee;
 
@@ -10,7 +11,7 @@ public interface EmployeeMapper {
 	
 	public void update(Employee employee);
 	
-	public List<Employee> findAll();
+	public List<Employee> findAll(Map<String, Object> params);
 	
 	public Employee findById(String id);
 	

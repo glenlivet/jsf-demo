@@ -1,9 +1,9 @@
 package org.ikgroup.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
-import org.ikgroup.domain.Account;
 import org.ikgroup.domain.Employee;
 import org.ikgroup.pao.SequencePao;
 import org.ikgroup.persistence.AccountMapper;
@@ -34,8 +34,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	@Transactional(readOnly=true)
-	public List<Employee> findAll() {
-		return empMapper.findAll();
+	public List<Employee> findAll(Map<String,Object> params) {
+		return empMapper.findAll(params);
 	}
 
 	@Override

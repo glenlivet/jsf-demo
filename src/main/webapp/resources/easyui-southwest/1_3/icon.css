@@ -1,0 +1,93 @@
+.icon-blank{
+	background:url('#{resource["easyui-southwest:icons/blank.gif"]}') no-repeat center center;
+}
+.icon-add{
+	background:url('#{resource["easyui-southwest:icons/edit_add.png"]}') no-repeat center center;
+}
+.icon-edit{
+	background:url('#{resource["easyui-southwest:icons/pencil.png"]}') no-repeat center center;
+}
+.icon-clear{
+	background:url('#{resource["easyui-southwest:icons/clear.png"]}') no-repeat center center;
+}
+.icon-remove{
+	background:url('#{resource["easyui-southwest:icons/edit_remove.png"]}') no-repeat center center;
+}
+.icon-save{
+	background:url('#{resource["easyui-southwest:icons/filesave.png"]}') no-repeat center center;
+}
+.icon-cut{
+	background:url('#{resource["easyui-southwest:icons/cut.png"]}') no-repeat center center;
+}
+.icon-ok{
+	background:url('#{resource["easyui-southwest:icons/ok.png"]}') no-repeat center center;
+}
+.icon-no{
+	background:url('#{resource["easyui-southwest:icons/no.png"]}') no-repeat center center;
+}
+.icon-cancel{
+	background:url('#{resource["easyui-southwest:icons/cancel.png"]}') no-repeat center center;
+}
+.icon-reload{
+	background:url('#{resource["easyui-southwest:icons/reload.png"]}') no-repeat center center;
+}
+.icon-search{
+	background:url('#{resource["easyui-southwest:icons/search.png"]}') no-repeat center center;
+}
+.icon-print{
+	background:url('#{resource["easyui-southwest:icons/print.png"]}') no-repeat center center;
+}
+.icon-help{
+	background:url('#{resource["easyui-southwest:icons/help.png"]}') no-repeat center center;
+}
+.icon-undo{
+	background:url('#{resource["easyui-southwest:icons/undo.png"]}') no-repeat center center;
+}
+.icon-redo{
+	background:url('#{resource["easyui-southwest:icons/redo.png"]}') no-repeat center center;
+}
+.icon-back{
+	background:url('#{resource["easyui-southwest:icons/back.png"]}') no-repeat center center;
+}
+.icon-sum{
+	background:url('#{resource["easyui-southwest:icons/sum.png"]}') no-repeat center center;
+}
+.icon-tip{
+	background:url('#{resource["easyui-southwest:icons/tip.png"]}') no-repeat center center;
+}
+.icon-filter{
+	background:url('#{resource["easyui-southwest:icons/filter.png"]}') no-repeat center center;
+}
+.icon-man{
+	background:url('#{resource["easyui-southwest:icons/man.png"]}') no-repeat center center;
+}
+.icon-lock{
+	background:url('#{resource["easyui-southwest:icons/lock.png"]}') no-repeat center center;
+}
+
+
+.icon-mini-add{
+	background:url('#{resource["easyui-southwest:icons/mini_add.png"]}') no-repeat center center;
+}
+.icon-mini-edit{
+	background:url('#{resource["easyui-southwest:icons/mini_edit.png"]}') no-repeat center center;
+}
+.icon-mini-refresh{
+	background:url('#{resource["easyui-southwest:icons/mini_refresh.png"]}') no-repeat center center;
+}
+
+.icon-large-picture{
+	background:url('#{resource["easyui-southwest:icons/large_picture.png"]}') no-repeat center center;
+}
+.icon-large-clipart{
+	background:url('#{resource["easyui-southwest:icons/large_clipart.png"]}') no-repeat center center;
+}
+.icon-large-shapes{
+	background:url('#{resource["easyui-southwest:icons/large_shapes.png"]}') no-repeat center center;
+}
+.icon-large-smartart{
+	background:url('#{resource["easyui-southwest:icons/large_smartart.png"]}') no-repeat center center;
+}
+.icon-large-chart{
+	background:url('#{resource["easyui-southwest:icons/large_chart.png"]}') no-repeat center center;
+}
