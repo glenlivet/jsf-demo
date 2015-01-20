@@ -13,20 +13,117 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>INSERT TITLE HERE</title>
 	<!-- 	<h:outputStylesheet library="css" name="reset.min.css" /> -->
-	<h:outputStylesheet library="css" name="common.css" />
-	<h:outputStylesheet library="css" name="icon.css" />
+	<h:outputStylesheet library="sungard-southwest" name="css/common.css" />
+	<h:outputStylesheet library="easyui-southwest" name="icon.css" />
+	<style type="text/css">
+
+
+
+
+</style>
+	<script type="text/javascript">
+		$(function() {
+			$('.ik-textarea-colspan-3').parent().attr("colspan", 3);
+			$('.ik-textarea-colspan-3').css("width", "92.3%");
+		});
+	</script>
 
 </h:head>
 <h:body>
-
+	<p:tooltip />
 	<h:form id="form">
-	
-		<h:panelGroup style="width:100%;">
-			<p:commandButton value="保存" style="float: right;" />
-			<p:commandButton value="返回" style="float: right;" />
+
+		<h:panelGroup id="btnBar" layout="block" styleClass="ik-buttonbar">
 			
+			<h:panelGroup style="float: right; padding-right: 2em;">
+				<p:commandButton value="保存" styleClass="ik-searchbtn"
+					style="display:inline-block" />
+				<p:commandButton value="返回" styleClass="ik-searchbtn"
+					style="display:inline-block" />
+			</h:panelGroup>
+			
+			<h:panelGroup styleClass="ik-formpage-title">
+				自有资金参与申请--添加
+			</h:panelGroup>
 		</h:panelGroup>
-	
+
+		<h:panelGroup id="formBody" styleClass="ik-formbody" layout="block">
+			<h:panelGrid columns="4" styleClass="ik-formtable"
+				columnClasses="ik-formlabel,ik-forminput,ik-formlabel,ik-forminput">
+
+				<f:facet name="header">
+             		基本信息
+       			</f:facet>
+			
+				<p:outputLabel value="产品名称" for="productName" />
+				
+				<h:panelGroup>
+					<p:inputText id="productName" value="" required="true" >
+						<p:ajax update="productNameMsg"/>
+					</p:inputText>
+					<p:message for="productName" id="productNameMsg" display="tooltip" />
+				</h:panelGroup>	
+				
+
+				<p:outputLabel value="申请人" />
+
+				<p:inputText value="" />
+
+				<p:outputLabel value="部门" />
+
+				<p:inputText value="" />
+
+				<p:outputLabel value="产品编号" />
+
+				<p:inputText value="" />
+			</h:panelGrid>
+
+			<h:panelGrid columns="4" styleClass="ik-formtable ik-appendtable"
+				columnClasses="ik-formlabel,ik-forminput,ik-formlabel,ik-forminput">
+
+				<f:facet name="header">
+             		参与信息
+       			</f:facet>
+
+				<p:outputLabel value="原因或用途" />
+
+				<p:inputText value="" />
+
+				<p:outputLabel value="用款类型" />
+
+				<p:inputText value="" />
+
+				<p:outputLabel value="参与金额" />
+
+				<p:inputText value="" />
+
+				<p:outputLabel value="用款时间" />
+
+				<p:inputText value="" />
+
+				<p:column styleClass="ik-formlabel">
+					<p:outputLabel value="备注" />
+				</p:column>
+
+				<p:column colspan="3">
+					<p:inputTextarea value="" styleClass="ik-textarea-colspan-3" />
+				</p:column>
+
+			</h:panelGrid>
+			<h:panelGrid columns="2" styleClass="ik-formtable ik-appendtable"
+				style="width:100%;" columnClasses="ik-formlabel-2, ik-formbtn-2">
+
+				<p:outputLabel value="附件" />
+
+				<p:button value="添加" styleClass="ik-searchbtn" />
+
+			</h:panelGrid>
+				
+			<h:panelGroup layout="block" style="height: 5em;">
+			</h:panelGroup>
+		</h:panelGroup>
+
+
 	</h:form>
 </h:body>
 	</html>

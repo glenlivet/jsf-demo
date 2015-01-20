@@ -1,5 +1,15 @@
 @CHARSET "UTF-8";
 
+* {
+	font-family: "微软雅黑","新宋体","arial";
+	
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
 /**
  * 调整通用样式
  */
@@ -10,6 +20,13 @@
 .ui-widget.ui-state-default.ui-button {
 	border: none;
 	color: white;
+}
+
+/**
+ * 必输 红色
+ */
+.ui-outputlabel .ui-outputlabel-rfi {
+	color: red;
 }
 
 /**
@@ -87,3 +104,82 @@
 	background: #ff5555
 		url('#{resource["sungard-southwest:images/btnSearch.png"]}');
 }
+
+/**
+ * 表单 首部按钮条
+ */
+.ik-buttonbar {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	padding: 0.6em 0;
+	box-shadow: 0 1px 1px #add9c0;
+	background-color: white;
+	z-index: 999;
+	border-bottom: #add9c0 solid 1px;
+}
+
+.ik-buttonbar .ik-searchbtn {
+	margin-left: 0.6em;
+}
+
+.ik-formpage-title {
+	margin-left: 2.5em;
+	font-weight: bold;
+}
+
+/**
+ * 表单主体的样式
+ */
+.ik-formbody {
+	position: relative;
+	top: 3.6em;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	border: #add9c0 solid 1px;
+}
+
+.ik-formlabel {
+	width: 8%;
+	text-align: right;
+	padding: 0.4em 1em;
+}
+
+.ik-forminput {
+	margin: 0.2em 0;
+	width: 17%;
+	padding: 0.4em 1em;
+}
+
+
+.ik-forminput .ui-inputfield {
+	width: 80%;
+}
+
+.ik-formbody thead {
+	text-align: left;
+}
+
+.ik-formbody th {
+	padding: 0.3em 1em;
+	border-bottom: #add9c0 solid 1px;
+}
+
+.ik-appendtable th {
+	border-top: #add9c0 solid 1px;
+}
+
+/**
+ * 表单中 一行 两组的样式
+ */
+.ik-formlabel-2 {
+	width: 16%;
+	text-align: right;
+	padding: 0.4em 1em;
+}
+
+.ik-formbtn-2 {
+	padding: 0.4em 1em;
+}
+
