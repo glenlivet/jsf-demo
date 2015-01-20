@@ -12,5 +12,7 @@ var initCommonTablePage = function(){
 	var menubarHeight = $('.ik-menubar').outerHeight();
 	var paginatorHeight = $('.ik-datatable .ui-paginator').outerHeight();
 	$('.ik-datatable .ui-datatable-tablewrapper').height(windowHeight - searchboxHeight - menubarHeight
-			- paginatorHeight - 20);
+			- paginatorHeight - 20)
+			.css('overflow', 'auto')
+			.css('overflow-x', 'auto');
 };

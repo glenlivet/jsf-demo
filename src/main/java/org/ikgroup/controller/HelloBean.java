@@ -63,6 +63,12 @@ public class HelloBean implements Serializable {
 		this.name = name;
 	}
 	
-	
+	public List<String> autocomplete(String query){
+		List<String> rtn = new ArrayList<String>();
+		
+		rtn.add("aa");
+		rtn.add("aaa");
+		return rtn;
+	}
 	
 }
