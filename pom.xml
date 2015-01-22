@@ -233,16 +233,16 @@
 				</configuration>
 			</plugin>
 
-			<plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat7-maven-plugin</artifactId>
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.apache.tomcat.maven</groupId> -->
+<!-- 				<artifactId>tomcat7-maven-plugin</artifactId> -->
 				<!-- or if you want to use tomcat 6.x <artifactId>tomcat6-maven-plugin</artifactId> -->
-				<version>2.2</version>
-				<configuration>
+<!-- 				<version>2.2</version> -->
+<!-- 				<configuration> -->
 					<!-- http port -->
-					<port>9090</port>
+<!-- 					<port>9090</port> -->
 					<!-- application path always starts with / -->
-					<path>/</path>
+<!-- 					<path>/</path> -->
 					<!-- optional path to a context file -->
 					<!-- <contextFile>${tomcatContextXml}</contextFile> -->
 					<!-- optional system propoerties you want to add -->
@@ -253,15 +253,15 @@
 					<!-- <java.io.tmpdir>${project.build.directory}</java.io.tmpdir> -->
 					<!-- </systemProperties> -->
 					<!-- if you want to use test dependencies rather than only runtime -->
-					<useTestClasspath>false</useTestClasspath>
+<!-- 					<useTestClasspath>false</useTestClasspath> -->
 					<!-- optional if you want to add some extra directories into the classloader -->
-					<additionalClasspathDirs>
-						<additionalClasspathDir></additionalClasspathDir>
-					</additionalClasspathDirs>
-				</configuration>
+<!-- 					<additionalClasspathDirs> -->
+<!-- 						<additionalClasspathDir></additionalClasspathDir> -->
+<!-- 					</additionalClasspathDirs> -->
+<!-- 				</configuration> -->
 				<!-- For any extra dependencies needed when running embedded Tomcat (not 
 					WAR dependencies) add them below -->
-				<dependencies>
+<!-- 				<dependencies> -->
 					<!-- <dependency> -->
 					<!-- <groupId>org.apache.derby</groupId> -->
 					<!-- <artifactId>derby</artifactId> -->
@@ -272,8 +272,8 @@
 					<!-- <artifactId>mail</artifactId> -->
 					<!-- <version>1.4</version> -->
 					<!-- </dependency> -->
-				</dependencies>
-			</plugin>
+<!-- 				</dependencies> -->
+<!-- 			</plugin> -->
 		</plugins>
 	</build>
 
