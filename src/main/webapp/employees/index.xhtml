@@ -81,8 +81,8 @@
 
 		</p:menubar>
 
-		<p:dataTable id="tbl" var="emp" value="#{employeesPageBean.employees}" 
-		styleClass="ik-datatable" tableStyleClass="ik-table"
+		<p:dataTable id="tbl" var="emp" value="#{employeesPageBean.employees}" resizableColumns="true"
+		styleClass="ik-datatable" tableStyle="width: 160%;" tableStyleClass="ik-table"
 		paginator="true" paginatorPosition="bottom" >
 			<p:column headerText="工号">
 				<h:outputText value="#{emp.id}" />

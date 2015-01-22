@@ -36,7 +36,7 @@
 		<h:panelGroup id="btnBar" layout="block" styleClass="ik-buttonbar">
 			
 			<h:panelGroup style="float: right; padding-right: 2em;">
-				<p:commandButton value="保存" styleClass="ik-searchbtn"
+				<p:commandButton value="保存" styleClass="ik-searchbtn" update="@form"
 					style="display:inline-block" />
 				<p:commandButton value="返回" styleClass="ik-searchbtn"
 					style="display:inline-block" />
@@ -75,7 +75,9 @@
 
 				<p:outputLabel value="产品编号" />
 
-				<p:inputText value="" />
+				<p:autoComplete id="autocomp" completeMethod="#{helloBean.autocomplete}" 
+				required="true" />
+				<p:message for="autocomp" display="tooltip" />
 			</h:panelGrid>
 
 			<h:panelGrid columns="4" styleClass="ik-formtable ik-appendtable"
