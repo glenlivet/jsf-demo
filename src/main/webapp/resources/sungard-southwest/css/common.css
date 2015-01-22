@@ -2,7 +2,7 @@
 
 * {
 	font-family: "微软雅黑","新宋体","arial";
-	
+	font-size: 0.8em;
 }
 
 body {
@@ -29,6 +29,12 @@ body {
 	color: red;
 }
 
+.ik-formbody .ui-message-info, .ik-formbody  .ui-message-error, .ik-formbody  .ui-message-warn, .ik-formbody  .ui-message-fatal {
+	margin: 0;
+	padding: 0;
+	width: 80%;
+}
+
 /**
  * 搜索栏基本样式
  */
@@ -50,8 +56,11 @@ body {
  * datatable 样式调整
  */
 .ui-datatable.ik-datatable .ui-datatable-tablewrapper {
-	border: 1px solid #aaaaaa;
-	border-bottom-style: none;
+	border: none;
+}
+
+.ui-datatable.ik-datatable .ui-widget-header {
+	border-left-style: none;
 }
 
 .ik-table, .ui-datatable.ik-datatable tr.ui-widget-content,
@@ -59,13 +68,22 @@ body {
 	{
 	border-top-style: none;
 	border-left-style: none;
+	border-color: #ccc;
+}
+
+.ui-datatable.ik-datatable thead th, 
+.ui-datatable.ik-datatable tbody td, 
+.ui-datatable.ik-datatable tfoot td {
+	border-left-style: none;
 }
 
 /**
  * 去除不必要的border
  */
 .ui-menubar.ik-menubar {
+	border-left-style: none;
 	border-bottom-style: none;
+	background: #fafafa;
 }
 
 /**
@@ -124,6 +142,7 @@ body {
 }
 
 .ik-formpage-title {
+	font-size: 0.9em;
 	margin-left: 2.5em;
 	font-weight: bold;
 }
@@ -134,7 +153,7 @@ body {
 .ik-formbody {
 	position: relative;
 	top: 3.6em;
-	width: 75%;
+	width: 99%;
 	margin-left: auto;
 	margin-right: auto;
 	border: #add9c0 solid 1px;
@@ -152,6 +171,10 @@ body {
 	padding: 0.4em 1em;
 }
 
+.ik-forminput .ui-autocomplete {
+	width: 100%;
+}
+
 
 .ik-forminput .ui-inputfield {
 	width: 80%;
@@ -162,6 +185,8 @@ body {
 }
 
 .ik-formbody th {
+	font-weight: normal;
+	text-align: left;
 	padding: 0.3em 1em;
 	border-bottom: #add9c0 solid 1px;
 }
